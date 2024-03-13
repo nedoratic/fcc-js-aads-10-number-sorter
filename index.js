@@ -19,3 +19,6 @@ const updateUI = (array = []) => {
 		outputValueNode.innerText = num;
 	});
 };
+
+// Click Event Listener
+sortButton.addEventListener('click', sortInputArray);
