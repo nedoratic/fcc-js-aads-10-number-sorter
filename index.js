@@ -11,3 +11,11 @@ const sortInputArray = (event) => {
 
 	updateUI(sortedValues);
 };
+
+// Update UI
+const updateUI = (array = []) => {
+	array.forEach((num, i) => {
+		const outputValueNode = document.getElementById(`output-value-${i}`);
+		outputValueNode.innerText = num;
+	});
+};
