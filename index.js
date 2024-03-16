@@ -20,7 +20,7 @@ const updateUI = (array = []) => {
 	});
 };
 
-// Bubble Sort
+// Bubble Sort Algorithm
 const bubbleSort = (array) => {
 	for (let i = 0; i < array.length; i++) {
 		for (let j = 0; j < array.length - 1; j++) {
@@ -30,6 +30,25 @@ const bubbleSort = (array) => {
 				array[j + 1] = temp;
 			}
 		}
+	}
+
+	return array;
+};
+
+// Selection Sort Algorithm
+const selectionSort = (array) => {
+	for (let i = 0; i < array.length; i++) {
+		let minIndex = i;
+
+		for (let j = i + 1; j < array.length; j++) {
+			if (array[j] < array[minIndex]) {
+				minIndex = j;
+			}
+		}
+
+		const temp = array[i];
+		array[i] = array[minIndex];
+		array[minIndex] = temp;
 	}
 
 	return array;
